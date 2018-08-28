@@ -18,13 +18,12 @@ public class Arreglos1 {
         int tam1 = leer.nextInt();
         int arreglo1[][] = new int[tam][tam1];
         int arreglo2[][] = new int[tam][tam1];
-        int arreglo3[] = new int[tam];
-        int arreglo4[] = new int[tam];
-        int arreglo5[] = new int[tam];
+        int arreglo3[][] = new int[tam][tam1];
         for(int f = 0; f<tam; f++){
             for(int c = 0; c<tam1; c++){
                 System.out.println("Ingrese un valor para el primer arreglo: ");
                 arreglo1[f][c] = leer.nextInt();
+                
             }
         }
         for(int f = 0; f<tam; f++){
@@ -33,33 +32,33 @@ public class Arreglos1 {
                 arreglo2[f][c] = leer.nextInt();
             }
         }
+        System.out.println("imprimiendo tabla 1: ");
         for(int x = 0; x<tam; x++){
             for(int y = 0; y<tam1; y++){
-                arreglo3[x] += arreglo1[x][y];
+              
+                System.out.print(arreglo1[x][y]);
                 
             }
+            System.out.println("");
         }
-        for(int x = 0; x<tam; x++){
+        System.out.println("imprimiendo tabla 2: ");
+         for(int x = 0; x<tam; x++){
             for(int y = 0; y<tam1; y++){
-                arreglo4[x] += arreglo2[x][y];
+              
+                System.out.print("|" + arreglo2[x][y]);
+                System.out.print(" | ");
                 
             }
+            System.out.println("");
         }
-        for(int x = 0; x<tam;x++){
-            System.out.println(arreglo3[x]);
-        }
-         for(int x = 0; x<tam;x++){
-            System.out.println(arreglo4[x]);
-        }
-         
-         for(int x=0; x<tam; x++){
-             arreglo5[x] = arreglo3[x] * arreglo4[x];
-             System.out.println(arreglo5[x]);
-    }
-        
-           
-        
-    
+         System.out.println("Imprimiendo suma: ");
+              for(int x = 0; x<tam; x++){
+                  for(int y = 0; y<tam1;y++){
+                      arreglo3[x][y] = arreglo1[x][y] + arreglo2[x][y];
+                      System.out.print(arreglo3[x][y]);
+                  }
+                  System.out.println("");
+              }
     
 }
 }
